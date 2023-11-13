@@ -2,11 +2,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 
 const teamsData = [
   {
     id: 1,
-    image: "../assets/images/team1.jpg",
+    image: "../../src/assets/images/team1.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -17,7 +18,7 @@ const teamsData = [
   },
   {
     id: 2,
-    image: "../assets/images/team2.jpg",
+    image: "../../src/assets/images/team2.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -28,7 +29,7 @@ const teamsData = [
   },
   {
     id: 3,
-    image: "../assets/images/team3.jpg",
+    image: "../../src/assets/images/team3.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -39,7 +40,7 @@ const teamsData = [
   },
   {
     id: 4,
-    image: "../assets/images/team4.jpg",
+    image: "../../src/assets/images/team4.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -50,7 +51,7 @@ const teamsData = [
   },
   {
     id: 5,
-    image: "../assets/images/team5.jpg",
+    image: "../../src/assets/images/team5.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -61,7 +62,7 @@ const teamsData = [
   },
   {
     id: 6,
-    image: "../assets/images/team6.jpg",
+    image: "../../src/assets/images/team6.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -72,7 +73,7 @@ const teamsData = [
   },
   {
     id: 7,
-    image: "../assets/images/team7.jpg",
+    image: "../../src/assets/images/team7.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -83,7 +84,7 @@ const teamsData = [
   },
   {
     id: 8,
-    image: "../assets/images/team8.jpg",
+    image: "../../src/assets/images/team8.jpg",
     fbLink: "https://www.facebook.com",
     twitterLink: "https://www.twitter.com",
     linkedinLink: "https://www.linkedin.com",
@@ -117,7 +118,7 @@ const Teams = () => {
               return (
                 <Col sm={3} key={id}>
                   <div className="image">
-                    Image
+                    <Image src={image} alt="Image" />
                     <div className="overlay">
                       <div className="socials">
                         <ul>
