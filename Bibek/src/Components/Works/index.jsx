@@ -2,72 +2,84 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Image } from "react-bootstrap";
+import Pagination from "react-bootstrap/Pagination";
 
 const worksData = [
   {
     id: 1,
     link: "https://www.google.com",
-    image: require("../assets/images/img2.jpg"),
+    image: "../../src/assets/images/img1.jpg",
     title: "Lonely Path",
     subtitle: "Web Design",
   },
   {
     id: 2,
     link: "https://www.google.com",
-    image: require("../assets/images/img3.jpg"),
+    image: "../../src/assets/images/img2.jpg",
     title: "Photographer Girl",
     subtitle: "Branding",
   },
   {
     id: 3,
     link: "https://www.google.com",
-    image: require("../assets/images/img4.jpg"),
+    image: "../../src/assets/images/img3.jpg",
     title: "The Difference",
     subtitle: "Web Design",
   },
   {
     id: 4,
     link: "https://www.google.com",
-    image: require("../assets/images/img5.jpg"),
+    image: "../../src/assets/images/img4.jpg",
     title: "Nature Patterns",
     subtitle: "Branding",
   },
   {
     id: 5,
     link: "https://www.google.com",
-    image: require("../assets/images/img6.jpg"),
+    image: "../../src/assets/images/img5.jpg",
     title: "The Difference",
     subtitle: "Photography",
   },
   {
     id: 6,
     link: "https://www.google.com",
-    image: require("../assets/images/img7.jpg"),
+    image: "../../src/assets/images/img6.jpg",
     title: "Winter Sonata",
     subtitle: "Web Design",
   },
   {
     id: 7,
     link: "https://www.google.com",
-    image: require("../assets/images/img8.jpg"),
+    image: "../../src/assets/images/img7.jpg",
     title: "Lonely Path",
     subtitle: "Branding",
   },
   {
     id: 8,
     link: "https://www.google.com",
-    image: require("../assets/images/img9.jpg"),
+    image: "../../src/assets/images/img8.jpg",
     title: "Appreciation",
     subtitle: "Photography",
   },
   {
     id: 9,
     link: "https://www.google.com",
-    image: require("../assets/images/img2.jpg"),
+    image: "../../src/assets/images/img9.jpg",
     title: "Happy Days",
     subtitle: "Web Design",
   },
 ];
+
+let active =1;
+let items = [];
+for (let number = 1; number <= 5; number++) {
+  items.push(
+    <Pagination.Item key={number} active={number === active}>
+      {number}
+    </Pagination.Item>
+  );
+}
 
 const Works = () => {
   return (
@@ -83,7 +95,7 @@ const Works = () => {
               <Col sm={4} key={id}>
                 <div className="portfolio-wrapper">
                   <a href={link}>
-                    Image
+                    <Image src={image} />
                     <div className="label text-center">
                       <h3>{title}</h3>
                       <p>{subtitle}</p>
@@ -94,6 +106,7 @@ const Works = () => {
             );
           })}
         </Row>
+        <Pagination>{items}</Pagination>
       </Container>
     </section>
   );
