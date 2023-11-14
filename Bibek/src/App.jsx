@@ -10,6 +10,7 @@ import Testimonials from "./Components/Testimonials";
 import Pricing from "./Components/Pricing";
 import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           <Blog />
           <Contact />
         </main>
+        <footer id="footer">
+          <Footer />
+        </footer>
       </div>
     </>
   );
