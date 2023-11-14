@@ -8,6 +8,7 @@ import Works from "./Components/Works";
 import Teams from "./Components/Teams";
 import Testimonials from "./Components/Testimonials";
 import Pricing from "./Components/Pricing";
+import Blog from "./Components/Blog";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Teams />
           <Testimonials />
           <Pricing />
+          <Blog />
         </main>
       </div>
     </>
